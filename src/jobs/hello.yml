@@ -5,10 +5,10 @@ description: >
 executor: default
 
 parameters:
-  to:
+  secret_id:
     type: string
-    default: "World"
-    description: "Hello to whom?"
+    description: "The secret ID to retrieve"
+
 steps:
-  - greet:
-      to: << parameters.to >>
+  - retrieve:
+      secret_id: << parameters.secret_id >>

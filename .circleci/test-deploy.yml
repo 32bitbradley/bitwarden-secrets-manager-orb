@@ -28,7 +28,8 @@ jobs:
     steps:
       - checkout
       # Run your orb's commands to validate them.
-      - bitwarden-secrets-manager/retrieve
+      - bitwarden-secrets-manager/retrieve:
+          secret_id: test-secret-id 
 workflows:
   test-deploy:
     jobs:
