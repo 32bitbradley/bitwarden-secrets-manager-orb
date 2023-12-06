@@ -1,0 +1,14 @@
+description: >
+  Use the load job to load a list of secrets via their IDs
+# Provide a use-case based example for using this orb.
+# Everything in the `usage` section will be displayed in the orb registry.
+# Comments are not retained.
+usage:
+  version: 2.1
+  orbs:
+    bitwarden-secrets-manager: orbs-32bitbradley/bitwarden-secrets-manager@0.1.0
+  workflows:
+    use-my-orb:
+      jobs:
+        - bitwarden-secrets-manager/load:
+            secret_ids: 29b5a0eb-c712-4bba-8e58-1f463243f0d8,ed619424-8243-4bed-a771-b1fc642f7e1a
