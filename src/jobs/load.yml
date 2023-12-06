@@ -41,6 +41,5 @@ steps:
       secrets_prefix: << parameters.secrets_prefix >>
 
   - export_secrets:
-      bws_access_token: << parameters.bws_access_token >>
       secrets_dir: << parameters.secrets_dir >>
       secrets_file: << parameters.secrets_file >>
