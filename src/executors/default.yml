@@ -1,0 +1,11 @@
+description: >
+  A Ubuntu based docker image created by CircleCI 
+docker:
+  - image: 'cimg/base'
+parameters:
+  tag:
+    default: lts
+    description: >
+      Pick a specific cimg/node image variant:
+      https://hub.docker.com/r/cimg/node/tags
+    type: string

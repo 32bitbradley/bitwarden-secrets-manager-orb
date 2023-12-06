@@ -1,6 +1,8 @@
 description: >
   Retreive secrets from bitwarden secret manager and store them as environment variables.
 
+executor: default
+
 parameters:
   version:
     type: string
