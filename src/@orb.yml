@@ -1,7 +1,7 @@
 version: 2.1
 
 description: >
-  Retrieves secrets from BitWarden Secret Manager and exports them as environment variables for use in CircleCI Pipelines
+  gets secrets from BitWarden Secret Manager and exports them as environment variables for use in CircleCI Pipelines
 
 # This information will be displayed in the orb registry and is not mandatory.
 display:

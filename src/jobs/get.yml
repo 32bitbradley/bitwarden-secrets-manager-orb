@@ -6,8 +6,8 @@ executor: default
 parameters:
   secret_id:
     type: string
-    description: "The secret ID to retrieve"
+    description: "The secret ID to get"
 
 steps:
-  - retrieve_secret:
+  - get_secret:
       secret_id: << parameters.secret_id >>
