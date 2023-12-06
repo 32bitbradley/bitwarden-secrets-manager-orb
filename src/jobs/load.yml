@@ -29,7 +29,7 @@ steps:
   - install:
       version: << parameters.version >>
 
-  - get_secret:
+  - get_secrets:
       secret_ids: << parameters.secret_ids >>
       secrets_dir: << parameters.secrets_dir >>
       secrets_file: << parameters.secrets_file >>
