@@ -11,4 +11,4 @@ steps:
       environment:
         PARAM_VERSION: <<parameters.version>>
       name: Install bitwarden secret manager CLI tool
-      command: <<include(scripts/get_secret.sh)>>
+      command: <<include(scripts/install.sh)>>
