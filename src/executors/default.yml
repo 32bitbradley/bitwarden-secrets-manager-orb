@@ -1,5 +1,5 @@
 description: >
-  A Ubuntu based docker image created by CircleCI 
+  A Ubuntu based docker image created by CircleCI
 docker:
   - image: 'cimg/base'
 parameters:
