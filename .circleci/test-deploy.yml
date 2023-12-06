@@ -60,8 +60,6 @@ workflows:
           requires:
             - orb-tools/pack
             - command-test
-            - bitwarden-secrets-manager/install
-            - bitwarden-secrets-manager/get_secrets
-            - bitwarden-secrets-manager/export_secrets
+            - bitwarden-secrets-manager/load
           context: orb-publishing
           filters: *release-filters
