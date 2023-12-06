@@ -31,6 +31,7 @@ jobs:
       - bitwarden-secrets-manager/install:
           version: "0.3.1"
       - bitwarden-secrets-manager/get_secrets:
+          bws_access_token: << environment.BWS_ACCESS_TOKEN >>
           secret_ids: 77b4801f-2901-48ae-b8c7-b0d00112ddc1,b9dfa922-6535-4bfb-b5e2-b0d0011302fa
       - bitwarden-secrets-manager/export_secrets:
           secrets_dir: .secrets
@@ -53,6 +54,7 @@ workflows:
       
       # Test Jobs
       - bitwarden-secrets-manager/load:
+          bws_access_token: << environment.BWS_ACCESS_TOKEN >>
           secret_ids: 77b4801f-2901-48ae-b8c7-b0d00112ddc1,b9dfa922-6535-4bfb-b5e2-b0d0011302fa
           filters: *filters
           context: orb-testing

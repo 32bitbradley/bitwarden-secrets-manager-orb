@@ -9,6 +9,10 @@ parameters:
     description: "The cli version to install."
     default: "0.3.1"
 
+  bws_access_token:
+    type: string
+    description: "Bitwarden Secrets Manager API Access Token"
+
   secret_ids:
     type: string
     description: "A CVS list of secret IDs to get"
@@ -30,11 +34,13 @@ steps:
       version: << parameters.version >>
 
   - get_secrets:
+      bws_access_token: << parameters.bws_access_token >>
       secret_ids: << parameters.secret_ids >>
       secrets_dir: << parameters.secrets_dir >>
       secrets_file: << parameters.secrets_file >>
       secrets_prefix: << parameters.secrets_prefix >>
 
   - export_secrets:
+      bws_access_token: << parameters.bws_access_token >>
       secrets_dir: << parameters.secrets_dir >>
       secrets_file: << parameters.secrets_file >>

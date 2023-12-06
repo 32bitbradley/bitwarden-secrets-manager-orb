@@ -9,8 +9,6 @@ A CircleCI Orb to Interface with Bit Warden Secrets Manager to download and retr
 
 This repository is designed to be automatically ingested and modified by the CircleCI CLI's `orb init` command.
 
-This orb requires a BitWarden Secret Manager Access token, this must be provided as an environment variables named `BWS_ACCESS_TOKEN`. This can be set in a context, for example.
-
 ---
 
 ## Resources
