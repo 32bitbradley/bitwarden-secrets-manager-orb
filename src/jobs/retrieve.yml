@@ -1,6 +1,5 @@
 description: >
-  Sample description
-# What will this job do?
+  Retreive secrets from bitwarden secret manager and store them as environment variables.
 
 executor: default
 
@@ -10,5 +9,5 @@ parameters:
     description: "The secret ID to retrieve"
 
 steps:
-  - retrieve:
+  - retrieve_secret:
       secret_id: << parameters.secret_id >>
