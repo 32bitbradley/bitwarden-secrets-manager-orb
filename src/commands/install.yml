@@ -1,0 +1,14 @@
+description: >
+  Installs the bitwarden secrets manager CLI tool
+
+parameters:
+  version:
+    type: string
+    description: "The cli version to install."
+    default: "0.3.1"
+steps:
+  - run:
+      environment:
+        PARAM_VERSION: <<parameters.version>>
+      name: Install bitwarden secret manager CLI tool
+      command: <<include(scripts/install.sh)>>
