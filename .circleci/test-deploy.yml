@@ -33,7 +33,7 @@ jobs:
       - bitwarden-secrets-manager/get_secrets:
           secret_ids: test-secret-id 
       - bitwarden-secrets-manager/export_secrets:
-          secret_dir: .secrets
+          secrets_dir: .secrets
           secrets_file: secrets.env
 
 workflows:
