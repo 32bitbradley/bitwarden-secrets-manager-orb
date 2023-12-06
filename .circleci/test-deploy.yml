@@ -30,6 +30,8 @@ jobs:
       # Run your orb's commands to validate them.
       - bitwarden-secrets-manager/get_secret:
           secret_id: test-secret-id 
+      - bitwarden-secrets-manager/install:
+          version: "0.3.1"
 workflows:
   test-deploy:
     jobs:
