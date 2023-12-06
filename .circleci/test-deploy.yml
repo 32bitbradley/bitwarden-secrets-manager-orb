@@ -45,8 +45,8 @@ workflows:
           filters: *filters
       
       # Test Jobs
-      - bitwarden-secrets-manager/get:
-          secret_ids: test-secret-id 
+      - bitwarden-secrets-manager/load:
+          secret_ids: test-secret-id
           filters: *filters
 
       # The orb must be re-packed for publishing, and saved to the workspace.
