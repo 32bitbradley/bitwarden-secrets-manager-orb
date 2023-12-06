@@ -35,6 +35,10 @@ jobs:
       - bitwarden-secrets-manager/export_secrets:
           secrets_dir: .secrets
           secrets_file: secrets.env
+      - name: Verify access to secrets
+        command: >
+          echo "Test secret value 1 is: ${CIRCLECI_ORB_TESTING_SECRET_1}"
+          echo "Test secret value 2 is: ${CIRCLECI_ORB_TESTING_SECRET_2}"
 
 workflows:
   test-deploy:
