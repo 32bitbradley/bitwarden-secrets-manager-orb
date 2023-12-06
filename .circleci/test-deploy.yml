@@ -38,8 +38,8 @@ jobs:
       - run:
           name: Verify access to secrets
           command: >
-            echo "Test secret value 1 is: ${CIRCLECI_ORB_TESTING_SECRET_1} | grep 'super-secret-value-1'
-            echo "Test secret value 2 is: ${CIRCLECI_ORB_TESTING_SECRET_2} | grep 'super-secret-value-2'
+            echo ${CIRCLECI_ORB_TESTING_SECRET_1} | grep 'super-secret-value-1'
+            echo ${CIRCLECI_ORB_TESTING_SECRET_2} | grep 'super-secret-value-2'
 
 workflows:
   test-deploy:
